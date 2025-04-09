@@ -1,0 +1,9 @@
+   {
+     "buildCommand": "next build || true",
+     "outputDirectory": "out",
+     "framework": "nextjs",
+     "rewrites": [
+       {"source": "/_not-found", "destination": "/"},
+       {"source": "/login/failed", "destination": "/login"}
+     ]
+   }
