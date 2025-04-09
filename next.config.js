@@ -18,8 +18,18 @@ const nextConfig = {
         source: '/login/failed',
         destination: '/login',
       },
+      {
+        source: '/_not-found',
+        destination: '/',
+      }
     ];
-  }
+  },
+  // 禁用内置的404页面
+  pageExtensions: ['tsx', 'ts', 'jsx', 'js'].filter(ext => !ext.includes('not-found')),
+  // 增加静态生成超时时间
+  staticPageGenerationTimeout: 180,
+  // 输出独立构建
+  output: 'standalone'
 };
 
 module.exports = nextConfig;
